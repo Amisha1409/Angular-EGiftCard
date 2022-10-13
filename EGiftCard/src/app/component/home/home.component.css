@@ -1,11 +1,14 @@
 .banner
 {
     background-image: url('../../../assets/images/banner.jpg');
+
     background-size: 1400px 600px;
+
+    /* background-size: 1400px 600px; */
     height: 600px;
     background-position: center top;
     background-repeat: no-repeat;
-    /* background-size: cover; */
+    background-size: cover;
 }
 .content a
 {

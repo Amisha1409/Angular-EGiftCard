@@ -1,1 +1,34 @@
 <p>gift-cards works!</p>
+
+<div>
+<h3>GiftCard Form</h3>
+</div>
+<table claa="table table-striped">
+
+    <tr *ngIf="giftcard.length > 0">
+
+        <th>GiftCard Id</th>
+
+        <th>GiftCard Name</th>
+
+        <th>About GiftCard</th>
+
+        <th>BrandList</th>
+    </tr>
+
+    <tr *ngFor="let gift of giftcard">
+
+        <td>{{gift.giftCardId}}</td>
+
+        <td>{{gift.giftCardName}}</td>
+
+        <td>{{gift.aboutGiftCard}}</td>
+        <td>{{gift.brandList}}</td>
+
+        <td><input type="button" (click)="sendGiftCard(gift.giftCardId)" value="Send" class="btn btn-primary"></td>
+
+       <!--<td><input type="button" (click)="(emp.employeeId)"value="Update" class="btn btn-primary"></td>-->
+
+    </tr>
+
+</table>

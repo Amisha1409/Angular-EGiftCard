@@ -10,8 +10,16 @@ const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'gift-cards',component:GiftCardsComponent},
   {path:'about',component:AboutComponent},
+
   {path:'contact',component:ContactComponent},
   {path:'login',component:LoginComponent}
+
+
+  {path:'contact',component:ContactComponent},
+  {path:'login',component:LoginComponent},
+
+  {path:'login',component:LoginComponent},
+  {path:'contact',component:ContactComponent}
 ];
 
 
