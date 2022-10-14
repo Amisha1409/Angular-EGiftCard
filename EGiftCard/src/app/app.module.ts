@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { LoginComponent } from './component/login/login.component';
 import { SignUpComponent } from './component/sign-up/sign-up.component';
+import { AdminComponent } from './component/admin/admin.component';
+import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import { SignUpComponent } from './component/sign-up/sign-up.component';
     ContactComponent,
     LoginComponent,
     SignUpComponent,
-    SignUpComponent
+    AdminComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,

@@ -30,7 +30,7 @@
         <div class="form-content">
           <div class="login-form">
             <div class="title">Login</div>
-          <form action="#">
+          <form action="#" >
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
@@ -40,7 +40,14 @@
                 <i class="fas fa-lock"></i>
                 <input type="password" placeholder="Enter your password" required>
               </div>
-              <div class="text"><a href="#">Forgot password?</a></div>
+              <div>
+                <label for="select" value="role"> Choose Role </label><br>
+                <input type="radio"  id="select" value="User" name="role" >
+                User
+                <input type="radio"  id="select" value="Admin" name="role" >
+                Admin
+              </div>
+              <div class="text"><a   routerLink="/forgotPassword" routerLinkActive="Active-Link">Forgot password?</a></div>
               <div class="button input-box">
                 <input type="submit" value="Sumbit">
               </div>
