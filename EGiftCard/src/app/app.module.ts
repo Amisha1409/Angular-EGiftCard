@@ -16,6 +16,7 @@ import { LoginComponent } from './component/login/login.component';
 import { SignUpComponent } from './component/sign-up/sign-up.component';
 import { AdminComponent } from './component/admin/admin.component';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { ForgotPasswordComponent } from './component/forgot-password/forgot-pass
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
