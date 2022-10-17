@@ -1,1 +1,57 @@
-<p>admin works!</p>
+<!DOCTYPE html>
+
+<input type="button" (click)="getAllUser()" value="User">
+<form [formGroup]="adminForm" (ngSubmit)="saveUser()">
+    <div class="form-group">
+        <div *ngIf="adminForm.controls['userId'].errors && 
+        (adminForm.controls['userId'].touched || adminForm.controls['userId'].dirty)">
+            User Id is required
+        </div>
+        <label for="userId">User Id</label>
+            <input class="form-control" [readonly]="isUpdate" type="text" name="userId" id="userId" formControlName="userId">
+    </div>
+    <div class="form-group">
+        <div *ngIf="adminForm.controls['firstName'].errors && 
+                (adminForm.controls['firstName'].touched || adminForm.controls['firstName'].dirty)">
+            First Name is required
+        </div>
+        <label for="firstName">First Name</label>
+        <input class="form-control" type="text" name="firstName" id="firstName"  formControlName="firstName" >
+    </div>
+     <div class="form-group">
+        <div *ngIf="adminForm.controls['lastName'].errors && 
+        (adminForm.controls['lastName'].touched || adminForm.controls['lastName'].dirty)">
+            Last name is required
+        </div>
+        <label for="lastName">Last Name</label>
+        <input class="form-control" type="text" name="lastName" id="lastName"  formControlName="lastName" >
+    </div>
+    <input type="submit" value="Save User"  class="btn btn-primary" [disabled]="adminForm.invalid">
+</form>
+
+<table border="2px">            
+              <tr >
+                    <th>User Id</th>
+                    <th>User FirstName</th>
+                    <th>User LastName</th>
+                    <th>User Email </th>
+                    <th>User Password </th>
+                    <th>User Address </th>
+                </tr>
+                <tr *ngFor="let u of users">
+                    <td>{{u.userId}}</td>
+                    <td>{{u.firstName}}</td>
+                    <td>{{u.lastName}}</td>
+                    <td>{{u.email}}</td>
+                    <td>{{u.password}}</td>
+                    <td>{{u.address}}</td>
+                    <td><input type="button" (click)="deleteUser(u.userId)" value="Delete" class="btn btn-primary"></td>
+                    <td><input type="button" (click)="updateUser(u.userId)" value="Update" class="btn btn-primary">
+                    </td>
+                </tr>
+        
+</table>
+
+
+
+

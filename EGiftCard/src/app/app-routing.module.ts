@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './component/about/about.component';
+import { AdminComponent } from './component/admin/admin.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
 import { GiftCardsComponent } from './component/gift-cards/gift-cards.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path:'contact',component:ContactComponent},
 
   {path:'forgotPassword',component:ForgotPasswordComponent},
+  {path:'admin', component:AdminComponent}
   
 ];
 

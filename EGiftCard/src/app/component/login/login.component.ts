@@ -12,24 +12,29 @@ import { AdminService } from 'src/app/service/admin.service';
 })
 export class LoginComponent implements OnInit {
 
-// loginForm!:FormGroup;
-// loading=false;
+ loginForm!:FormGroup;
+  isUpdate=false;
+  
+email!:string;
+password!:string;
 // submitted=false;
 //returnUrl:string;
   //admin!: Admin;
-  constructor(
+  constructor(private fb: FormBuilder,
     // private route:ActivatedRoute,
-    // private router:Router,
+     private router:Router,
     // private adminService:AdminService,
     ) 
   { 
   }
 
   ngOnInit(): void {
-    // this.loginForm=this.formBuilder.group({
-    //   email:['',Validators.required],
-    //   password:['',Validators.required]
-    // });
+
+
+    this.loginForm=this.fb.group({
+      email:['',Validators.required],
+      password:['',Validators.required]
+    });
 
     // this.adminService.login(this.admin.email,this.admin.password)
     // .subscribe(
@@ -40,7 +45,18 @@ export class LoginComponent implements OnInit {
   //this.returnUrl=this.route.snapshot.queryParams['returnUrl'] ;
   }
 
+  login():void{
 
+    if(this.loginForm.value.email=='admin@admin.com' && this.loginForm.value.password=='admin')
+    {
+      this.router.navigate(["/admin"]);
+    }
+    else
+    {
+      this.router.navigate(["/"]);
+    alert("Invalid credentials")
+    }
+  }
 
   // onSubmit()
   // {

@@ -50,6 +50,19 @@ updateUser(email:string)
     }
   );
   this.isUpdate=true;
-  this.adminService.forgotPassword(u,email);
+  if(this.isUpdate==true)
+  {
+    this.adminService.forgotPassword(u,u.email)
+    //.subscribe(data => {
+    //   alert("Employee  is Updated");
+    // )
+
+
+  }
+      else
+      console.log("no updation");
+      
+  
 }
 }
+
